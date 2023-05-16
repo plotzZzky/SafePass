@@ -29,6 +29,12 @@ export default function NavBar() {
         }
     }
 
+    function go_login() {
+        if (getToken == undefined) {
+            location.href = "/SafePass/login/"
+        } 
+    }
+
     return (
         <div className="navbar">
 
@@ -46,7 +52,7 @@ export default function NavBar() {
                         <a><FontAwesomeIcon icon="fa-solid fa-lock" className='icon-menu'/> Senhas</a>
                     </div>
 
-                    <div className="menu-item" onClick={() => location.href="/SafePass/login/"}>
+                    <div className="menu-item" onClick={go_login}>
                         <a><FontAwesomeIcon icon="fa-solid fa-user" className='icon-menu'/> Entrar </a>
                     </div>
 
