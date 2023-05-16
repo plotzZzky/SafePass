@@ -1,0 +1,266 @@
+/* Posts */
+.view-cards {
+    width: auto;
+    max-width: 800px;
+    min-height: 94vh;
+    margin: auto;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid grey;
+}
+
+.pwd-card {
+    width: calc(100% - 22px);
+    height: auto;
+    margin: 2px;
+    padding: 4px 8px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    background-color: #333;
+    position: relative;
+}
+
+.pwd-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--fontColor_pri);
+}
+
+.align-btns {
+    display: inline-flex;
+    gap: 1em;
+}
+
+.pwd-del {
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.pwd-del * {
+    font-size: 1.2rem;
+    color: var(--fontColor_pri);
+}
+
+.align-app {
+    width: calc(100% - 4px);
+    height: auto;
+    margin: 4px 0 2px;
+    padding: 2px 2px;
+    display: inline-flex;
+    justify-content: space-around;
+    background-color: var(--background);
+}
+
+.btn-app{
+    margin: auto;
+    padding: 5px 1em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fontColor_pri);
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color_accent);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+    
+.btn-app * {
+    color: var(--fontColor_pri);
+}
+  
+.btn-app::before{
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    padding: 10px 1.2em;
+    background-color: var(--fontColor_pri);
+    border: none;
+    border-radius: 4px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+    
+.btn-app:hover::before{
+    transform-origin: center;
+    transform: scaleX(1);
+}
+  
+.btn-app:hover , .btn-app:hover *{
+    transition: 500ms ease-in-out;
+    color: var(--color_accent);
+}
+
+
+/* Modal */
+.modal-background {
+    position: fixed;
+    opacity: 0;
+    inset: 0;
+    background-color: #000000F2;
+    z-index: -999;
+    transform-origin: center;
+    transition: all 400ms;
+}
+
+.modal-background.show {
+    opacity: 1;
+    z-index: 999;
+    transition: opacity 400ms;
+}
+
+.modal-div {
+    width: 90%;
+    max-width: calc(360px + 2em);
+    height: auto;
+    margin: 5% auto;
+    padding: 2em 1em;
+    background-color: var(--color_accent);
+}
+
+/* Login */
+.login-div {
+    display: block;
+    width: 500px;
+    margin: auto;
+    padding: 1em;
+    background-color: var(--color_accent);
+}
+
+.login-title {
+    color: var(--fontColor_pri);
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.login-text-link {
+    color: var(--fontColor_sec);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.div-input {
+    width: calc(96% - 16px);
+    height: auto;
+    margin: 2%;
+    background-color: white;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 6px 4px;
+    border: none;
+    font-weight: 600;
+    color: var(--fontColor_sec);
+    outline: 0;
+}
+
+.icon-input, .icon-input-validate {
+    margin: 0 1em 0;
+}
+
+.icon-input * {
+    color: red;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.icon-input-validate * {
+    color: green;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.align-inputs {
+    width: auto;
+    height: auto;
+    padding: 1em 0 1em;
+}
+
+.login-tip {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn {
+    margin: auto;
+    padding: 10px 1.2em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--fontColor_pri);
+    border-radius: 4px;
+    border: none;
+    background-color: var(--background);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+    
+.btn * {
+    color: var(--fontColor_sec);
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    padding: 10px 1.2em;
+    background-color: var(--fontColor_pri);
+    border: none;
+    border-radius: 4px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+    
+.btn:hover::before{
+    transform-origin: center;
+    transform: scaleX(1);
+}
+  
+.btn:hover {
+    transition: 500ms ease-in-out;
+    color: var(--color_accent);
+}
+
+@media screen and (max-width: 600px) {
+    .login-div {
+        width: calc(90% - 1em);
+        margin: auto 5%;
+        padding: 0.5em;
+    }
+    
+    .div-input{
+        width: 92%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .app-navbar {
+        gap: 0 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app-navbar-icon-div {
+        font-size: 0.8rem;
+    }
+
+    .app-icon {
+        font-size: 1rem;
+    }
+}

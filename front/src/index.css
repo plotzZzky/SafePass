@@ -1,0 +1,118 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color_pri: #1f1e1e;
+  --color_sec: lightgrey;
+  --color_accent: #ff4646;
+  --color_navbar_font_hover: black;
+
+  --background: #2e2d2d;
+  --background_div: white;
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  --fontColor_pri: rgb(238, 227, 227);
+  --fontColor_sec: rgb(22, 21, 21);
+  --font_title: Montserrat;
+  --font: Oswald;
+
+  --menu_size: 120px;
+}
+
+* {
+  color: var(--fontColor_pri);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+  text-align: center;
+}
+
+/* content */
+.page, .page-home {
+  margin: 0;
+  padding: 3em 0em 0em;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.6em;
+  color: var(--color_accent);
+  font-family: var(--font_title);
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  color: var(--color_accent);
+  font-family: var(--font_title);
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--fontColor_pri);
+  font-family: var(--font);
+}
+
+.home-text {
+  font-size: 1.2rem;
+  color: var(--fontColor_pri);
+}
+
+footer {
+  background-color: #333;
+  width: calc(100% - 2em);
+  height: 32px;
+  padding: 1em;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .home-text {
+    font-size: 1em;
+    padding: 2em;
+  }
+
+  .page {
+    margin: 0;
+    padding: 8em 5px 5px;
+    width: calc(100% - 10px);
+  }
+
+  .page-home {
+    margin: 0;
+    padding: 6em 5px 5px;
+    width: calc(100% - 10px);
+  }
+
+  .btn {
+    font-size: 1em;
+  }
+
+}

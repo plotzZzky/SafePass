@@ -1,0 +1,9 @@
+# folders
+.idea/
+/venv/
+*/__pycache__/*
+*/migrations/__pycache__/*
+
+# Files
+*.kdbx
+*_initial.py

@@ -1,0 +1,84 @@
+.brand-home {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 5% auto 3%;
+}
+
+.brand-home-title {
+  font-size: 10rem;
+  font-weight: 600;
+  font-family: var(--font_title);
+  color: var(--color_accent);
+}
+
+.brand-home-slogan {
+  margin: -48px auto 0;
+  padding: 2px 8px;
+  font-size: 1.6rem;
+  color: var(--color_accent);
+}
+
+.btn-home{
+  margin: 2em auto;
+  padding: 10px 1.2em;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--fontColor_pri);
+  border-radius: 4px;
+  border: none;
+  background-color: var(--color_accent);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+  
+.btn-home * {
+  color: var(--fontColor_sec);
+}
+
+.btn-home::before{
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  padding: 10px 1.2em;
+  background-color: var(--fontColor_pri);
+  border: none;
+  border-radius: 4px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+  
+.btn-home:hover::before{
+  transform-origin: center;
+  transform: scaleX(1);
+}
+
+.btn-home:hover {
+  transition: 500ms ease-in-out;
+  color: var(--color_accent);
+}
+
+@media screen and (max-width: 900px) {
+  .brand-home-title {
+    font-size: 6rem;
+  }
+
+  .brand-home-slogan {
+    font-size: 1.2rem;
+    margin: -32px auto 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .brand-home-title {
+    font-size: 4rem;
+  }
+
+  .brand-home-slogan {
+    font-size: 0.8rem;
+    margin: -28px auto 0;
+  }
+}
